@@ -32,9 +32,9 @@
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
   border-bottom: 1px solid var(--border);
 }
-.admin-table td { padding: 0.85rem 1rem; border-bottom: 1px solid rgba(201,168,76,0.08); vertical-align: middle; }
+.admin-table td { padding: 0.85rem 1rem; border-bottom: 1px solid rgba(122,62,144,0.08); vertical-align: middle; }
 .admin-table tr:last-child td { border-bottom: none; }
-.admin-table tr:hover td { background: rgba(201,168,76,0.03); }
+.admin-table tr:hover td { background: rgba(122,62,144,0.03); }
 .mono { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.06em; }
 .gold-text { color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.05em; }
 .muted-text { color: var(--muted); font-size: 0.82rem; }
@@ -114,7 +114,7 @@
   background: transparent; border: 1px solid var(--border); color: var(--muted);
 }
 .featured-toggle:hover { border-color: var(--gold); color: var(--gold); }
-.featured-toggle.is-featured { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+.featured-toggle.is-featured { border-color: var(--gold); color: var(--gold); background: rgba(122,62,144,0.1); }
 
 /* No products message */
 .no-products-home { text-align: center; padding: 3rem 2rem; color: var(--muted); }
@@ -133,7 +133,7 @@
   font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
   padding: 0.2rem 0.55rem;
 }
-.role-chip.admin { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+.role-chip.admin { background: rgba(122,62,144,0.15); color: var(--gold); border: 1px solid rgba(122,62,144,0.3); }
 .role-chip.user  { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
 .status-chip-user {
   font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem;

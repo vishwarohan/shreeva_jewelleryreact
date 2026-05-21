@@ -16,6 +16,7 @@ import AdminPage from './pages/AdminPage';
 import ContactPage from './pages/ContactPage';
 import AccountPage from './pages/AccountPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import { AboutPage, ReviewsPage, PolicyPage } from './pages/InfoPage';
 import { whatsappLink } from './utils/whatsapp';
 import './index.css';
 
@@ -59,9 +60,9 @@ export default function App() {
           <Toaster
             position="top-right"
             toastOptions={{
-              style: { background: '#1A1A1A', color: '#F0EBE0', border: '1px solid rgba(201,168,76,0.3)', fontFamily: 'Barlow, sans-serif', fontSize: '0.88rem' },
-              success: { iconTheme: { primary: '#C9A84C', secondary: '#1A1A1A' } },
-              error: { iconTheme: { primary: '#e74c3c', secondary: '#1A1A1A' } },
+              style: { background: '#fff', color: '#2F1738', border: '1px solid rgba(122,62,144,0.3)', fontFamily: 'Barlow, sans-serif', fontSize: '0.88rem' },
+              success: { iconTheme: { primary: '#7A3E90', secondary: '#fff' } },
+              error: { iconTheme: { primary: '#e74c3c', secondary: '#fff' } },
             }}
           />
           <Routes>
@@ -80,6 +81,13 @@ export default function App() {
             <Route path="/contact"         element={<Layout><ContactPage /></Layout>} />
             <Route path="/account"         element={<Layout><AccountPage /></Layout>} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/about"           element={<Layout><AboutPage /></Layout>} />
+            <Route path="/reviews"         element={<Layout><ReviewsPage /></Layout>} />
+            <Route path="/warranty"        element={<Layout><PolicyPage type="warranty" /></Layout>} />
+            <Route path="/returns"         element={<Layout><PolicyPage type="returns" /></Layout>} />
+            <Route path="/terms"           element={<Layout><PolicyPage type="terms" /></Layout>} />
+            <Route path="/privacy"         element={<Layout><PolicyPage type="privacy" /></Layout>} />
+            <Route path="/faq"             element={<Layout><PolicyPage type="faq" /></Layout>} />
             {/* 404 */}
             <Route path="*" element={
               <Layout>

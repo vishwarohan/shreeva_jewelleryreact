@@ -12,7 +12,7 @@
   transition: all 0.2s; cursor: pointer;
 }
 .type-btn:hover, .type-btn.active { border-color: var(--gold); color: var(--gold); }
-.type-btn.active { background: rgba(201,168,76,0.1); }
+.type-btn.active { background: rgba(122,62,144,0.1); }
 .sort-select { width: 200px; }
 .shop-empty { text-align: center; padding: 5rem 2rem; color: var(--muted); font-size: 1.1rem; }
 .pagination { display: flex; gap: 0.5rem; justify-content: center; margin-top: 3rem; }

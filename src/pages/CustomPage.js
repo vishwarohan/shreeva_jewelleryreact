@@ -145,8 +145,8 @@ export default function CustomPage() {
               Vesu Main road<br/>
               Surat, Gujarat, 395007
             </p>
-            <a href="https://www.instagram.com/wywindia/" target="_blank" rel="noreferrer" className="btn-ghost" style={{marginTop:'1rem',display:'inline-flex'}}>
-              @wywindia on Instagram
+            <a href="https://www.instagram.com/shreeva_jewels/" target="_blank" rel="noreferrer" className="btn-ghost" style={{marginTop:'1rem',display:'inline-flex'}}>
+              @shreeva_jewels on Instagram
             </a>
           </div>
         </aside>

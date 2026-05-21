@@ -1,27 +1,34 @@
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(8,8,8,0.88);
+  background: rgba(255,251,242,0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(75,20,93,0.13);
   transition: border-color 0.3s;
+  box-shadow: 0 10px 30px rgba(75,20,93,0.06);
 }
-.navbar.scrolled { border-bottom-color: rgba(201,168,76,0.35); }
+.navbar.scrolled { border-bottom-color: rgba(75,20,93,0.26); }
 .navbar-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 2rem;
-  height: 68px; display: flex; align-items: center; gap: 2rem;
+  height: 68px; display: flex; align-items: center; gap: 1.4rem;
 }
 .navbar-logo {
+  display: flex; align-items: center; gap: 0.65rem;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.9rem; letter-spacing: 0.15em; color: var(--gold);
-  flex-shrink: 0;
+  font-size: 1.65rem; letter-spacing: 0.08em; color: var(--purple);
+  flex-shrink: 0; text-transform: uppercase;
+}
+.navbar-logo img {
+  width: 42px; height: 42px; border-radius: 50%;
+  object-fit: cover; box-shadow: 0 6px 18px rgba(75,20,93,0.22);
 }
 .navbar-links {
-  display: flex; gap: 2rem; list-style: none; flex: 1; justify-content: center;
+  display: flex; gap: 1.15rem; list-style: none; flex: 1; justify-content: center;
 }
 .navbar-links a {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text); transition: color 0.2s;
+  white-space: nowrap;
 }
 .navbar-links a:hover { color: var(--gold); }
 
@@ -34,7 +41,7 @@
   border: 1px solid var(--gold); color: var(--gold);
   transition: all 0.2s;
 }
-.navbar-login:hover { background: var(--gold); color: var(--black); }
+.navbar-login:hover { background: var(--gold); color: #fff; }
 
 .navbar-user { position: relative; cursor: pointer; }
 .navbar-user-name {
@@ -76,7 +83,7 @@
 @media (max-width: 768px) {
   .navbar-links {
     display: none; position: fixed; top: 68px; left: 0; right: 0;
-    background: var(--dark); border-bottom: 1px solid var(--border);
+    background: var(--cream); border-bottom: 1px solid var(--border);
     flex-direction: column; padding: 1.5rem 2rem; gap: 1.25rem;
   }
   .navbar-links.open { display: flex; }

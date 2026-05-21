@@ -15,7 +15,7 @@
   padding: 3rem; min-height: 400px;
   background: linear-gradient(135deg, #130e00, #0f0f0f, #130900);
 }
-.detail-image svg { filter: drop-shadow(0 0 30px rgba(201,168,76,0.4)); }
+.detail-image svg { filter: drop-shadow(0 0 30px rgba(122,62,144,0.4)); }
 .detail-image-footer {
   display: flex; justify-content: space-around;
   padding: 0.9rem; border-top: 1px solid var(--border);
@@ -63,7 +63,7 @@
   font-family: 'Barlow Condensed', sans-serif; font-weight: 600; letter-spacing: 0.08em;
 }
 .size-btn:hover { border-color: var(--gold); color: var(--gold); }
-.size-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+.size-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(122,62,144,0.1); }
 
 .qty-row { display: flex; gap: 1rem; align-items: center; }
 .qty-ctrl {
@@ -114,7 +114,7 @@
 }
 .product-img-real { width:100%; height:420px; object-fit:contain; }
 .product-img-placeholder { display:flex; align-items:center; justify-content:center; padding:3rem; }
-.product-img-placeholder svg { filter:drop-shadow(0 0 30px rgba(201,168,76,0.4)); }
+.product-img-placeholder svg { filter:drop-shadow(0 0 30px rgba(122,62,144,0.4)); }
 .detail-thumbs { display:flex; gap:0.5rem; padding:0.75rem; background:var(--dark-elevated); border-top:1px solid var(--border); overflow-x:auto; }
 .thumb-btn { width:70px; height:70px; border:2px solid transparent; background:var(--dark-surface); padding:0; cursor:pointer; flex-shrink:0; transition:border-color 0.2s; overflow:hidden; }
 .thumb-btn img { width:100%; height:100%; object-fit:cover; }
@@ -124,7 +124,7 @@
 .diamond-section { background:var(--dark-surface); border:1px solid var(--border); padding:1.25rem; }
 .diamond-title { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.08em; color:var(--gold); margin-bottom:1rem; }
 .diamond-grid { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem; }
-.diamond-badge { background:var(--dark-elevated); border:1px solid rgba(201,168,76,0.25); padding:0.45rem 0.85rem; display:flex; flex-direction:column; gap:0.1rem; }
+.diamond-badge { background:var(--dark-elevated); border:1px solid rgba(122,62,144,0.25); padding:0.45rem 0.85rem; display:flex; flex-direction:column; gap:0.1rem; }
 .db-label { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); }
 .db-value { font-size:0.85rem; font-weight:600; color:var(--text); }
 .cut-meter { display:flex; align-items:center; gap:0.75rem; margin-top:0.5rem; }
@@ -146,7 +146,7 @@
   transition:all 0.2s; font-family:'Barlow',sans-serif;
 }
 .material-btn:hover { border-color:var(--gold); color:var(--text); }
-.material-btn.active { border-color:var(--gold); color:var(--text); background:rgba(201,168,76,0.08); }
+.material-btn.active { border-color:var(--gold); color:var(--text); background:rgba(122,62,144,0.08); }
 .material-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; border:1px solid rgba(255,255,255,0.15); }
 
 /* ── WHATSAPP ── */

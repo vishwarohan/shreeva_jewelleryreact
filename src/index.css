@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap');
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96A;
-  --black: #080808;
-  --dark: #111111;
-  --dark-surface: #1A1A1A;
-  --dark-elevated: #222222;
-  --muted: #888888;
-  --text: #F0EBE0;
-  --border: rgba(201, 168, 76, 0.2);
+  --gold: #7A3E90;
+  --gold-light: #A86BC1;
+  --black: #FFFBF2;
+  --dark: #FFF6E6;
+  --dark-surface: #FFFFFF;
+  --dark-elevated: #F7EAD8;
+  --muted: #756372;
+  --text: #2F1738;
+  --cream: #FFF6E6;
+  --purple: #4B145D;
+  --purple-deep: #2B0838;
+  --border: rgba(75, 20, 93, 0.16);
   --danger: #e74c3c;
   --success: #2ecc71;
 }
@@ -18,7 +21,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--black);
+  background:
+    radial-gradient(circle at top left, rgba(122,62,144,0.11), transparent 34rem),
+    linear-gradient(180deg, #fffaf0 0%, #fff6e6 44%, #ffffff 100%);
   color: var(--text);
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
@@ -27,7 +32,7 @@ body {
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
 a { color: inherit; text-decoration: none; }
@@ -45,8 +50,9 @@ input, select, textarea { font-family: inherit; }
   font-size: 0.85rem; font-weight: 700;
   letter-spacing: 0.2em; text-transform: uppercase;
   padding: 0.85rem 2rem;
-  background: var(--gold); color: var(--black);
+  background: var(--purple); color: #fff;
   border: 1px solid var(--gold);
+  box-shadow: 0 10px 26px rgba(75,20,93,0.22);
   transition: all 0.2s;
   cursor: pointer;
 }
@@ -59,8 +65,8 @@ input, select, textarea { font-family: inherit; }
   font-size: 0.85rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase;
   padding: 0.85rem 1.75rem;
-  border: 1px solid rgba(240,235,224,0.25); color: var(--text);
-  background: transparent;
+  border: 1px solid rgba(75,20,93,0.22); color: var(--purple);
+  background: rgba(255,255,255,0.68);
   transition: all 0.2s; cursor: pointer;
 }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
@@ -85,8 +91,8 @@ input, select, textarea { font-family: inherit; }
 }
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  background: var(--dark-surface);
-  border: 1px solid rgba(201,168,76,0.25);
+  background: #fff;
+  border: 1px solid rgba(122,62,144,0.25);
   color: var(--text);
   padding: 0.65rem 0.9rem;
   font-size: 0.9rem; outline: none;
@@ -133,7 +139,7 @@ input, select, textarea { font-family: inherit; }
   font-size: 0.65rem; font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase;
   padding: 0.2rem 0.6rem;
-  background: var(--gold); color: var(--black);
+  background: var(--purple); color: #fff;
   display: inline-block;
 }
 

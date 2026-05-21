@@ -27,7 +27,7 @@
   font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
   padding: 0.2rem 0.65rem;
 }
-.account-role-badge.admin { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.4); }
+.account-role-badge.admin { background: rgba(122,62,144,0.15); color: var(--gold); border: 1px solid rgba(122,62,144,0.4); }
 .account-role-badge.user  { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
 .account-header-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
 
@@ -65,7 +65,7 @@
 .profile-image-preview {
   width: 84px; height: 84px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: var(--dark-surface); border: 2px solid rgba(201,168,76,0.55);
+  background: var(--dark-surface); border: 2px solid rgba(122,62,144,0.55);
   color: var(--gold); font-family: 'Bebas Neue', sans-serif;
   font-size: 1.3rem; letter-spacing: 0.06em; overflow: hidden; flex-shrink: 0;
 }
@@ -90,8 +90,8 @@
   background: var(--dark-elevated); border: 2px solid transparent;
   cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center;
 }
-.avatar-opt:hover { border-color: rgba(201,168,76,0.5); transform: scale(1.1); }
-.avatar-opt.active { border-color: var(--gold); background: rgba(201,168,76,0.1); }
+.avatar-opt:hover { border-color: rgba(122,62,144,0.5); transform: scale(1.1); }
+.avatar-opt.active { border-color: var(--gold); background: rgba(122,62,144,0.1); }
 
 /* PASSWORD */
 .pw-input-wrap { position: relative; display: flex; }

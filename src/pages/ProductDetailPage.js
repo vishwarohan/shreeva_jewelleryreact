@@ -106,11 +106,11 @@ export default function ProductDetailPage() {
             ) : (
               <div className="product-img-placeholder">
                 <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
-                  <polygon points="70,8 130,45 110,118 30,118 10,45" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" strokeWidth="1.5"/>
-                  <polygon points="70,8 130,45 70,34" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" strokeWidth="0.6"/>
-                  <polygon points="70,8 10,45 70,34" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" strokeWidth="0.6"/>
-                  <text x="70" y="82" fontFamily="'Bebas Neue',sans-serif" fontSize="18" fill="#C9A84C" textAnchor="middle" letterSpacing="4">WYW</text>
-                  <circle cx="70" cy="8" r="4" fill="#E8C96A"/>
+                  <polygon points="70,8 130,45 110,118 30,118 10,45" fill="rgba(122,62,144,0.08)" stroke="#7A3E90" strokeWidth="1.5"/>
+                  <polygon points="70,8 130,45 70,34" fill="rgba(122,62,144,0.2)" stroke="#7A3E90" strokeWidth="0.6"/>
+                  <polygon points="70,8 10,45 70,34" fill="rgba(122,62,144,0.1)" stroke="#7A3E90" strokeWidth="0.6"/>
+                  <text x="70" y="82" fontFamily="'Bebas Neue',sans-serif" fontSize="18" fill="#7A3E90" textAnchor="middle" letterSpacing="4">WYW</text>
+                  <circle cx="70" cy="8" r="4" fill="#A86BC1"/>
                 </svg>
               </div>
             )}

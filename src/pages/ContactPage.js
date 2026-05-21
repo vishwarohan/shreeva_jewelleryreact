@@ -56,8 +56,8 @@ export default function ContactPage() {
           },
           {
             icon: '📸', title: 'Instagram',
-            lines: ['@wywindia', 'DM us for custom enquiries', 'See our latest drops'],
-            action: { label: 'Follow Us', href: 'https://www.instagram.com/wywindia/' },
+            lines: ['@shreeva_jewels', 'DM us for custom enquiries', 'See our latest drops'],
+            action: { label: 'Follow Us', href: 'https://www.instagram.com/shreeva_jewels/' },
           },
           {
             icon: '✉️', title: 'Email',

@@ -46,7 +46,7 @@
   z-index: 1; margin-bottom: 0.75rem;
   transition: all 0.3s;
 }
-.tracker-step.done .tracker-dot { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+.tracker-step.done .tracker-dot { border-color: var(--gold); color: var(--gold); background: rgba(122,62,144,0.1); }
 .tracker-step.current .tracker-dot { border-color: var(--gold); background: var(--gold); color: var(--black); }
 .tracker-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-align: center; }
 .tracker-step.done .tracker-label, .tracker-step.current .tracker-label { color: var(--gold); }

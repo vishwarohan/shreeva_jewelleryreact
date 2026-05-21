@@ -1,16 +1,23 @@
-.footer { background: var(--dark-surface); border-top: 1px solid var(--border); }
+.footer { background: #fff; border-top: 1px solid var(--border); }
 .footer-inner { padding-top: 4rem; padding-bottom: 2rem; }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
-.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.12em; color: var(--gold); display: block; margin-bottom: 1rem; }
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.12em;
+  color: var(--purple); display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+}
+.footer-logo img {
+  width: 54px; height: 54px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 8px 22px rgba(75,20,93,0.18);
+}
 .footer-tagline { font-size: 0.87rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 1.5rem; max-width: 240px; }
 .footer-social { display: flex; gap: 0.6rem; }
 .social-btn {
-  width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.3);
+  width: 34px; height: 34px; border: 1px solid rgba(122,62,144,0.3);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
   color: var(--gold); transition: all 0.2s;
 }
-.social-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.social-btn:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
 .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
 .footer-links a { font-size: 0.87rem; color: var(--muted); transition: color 0.2s; }

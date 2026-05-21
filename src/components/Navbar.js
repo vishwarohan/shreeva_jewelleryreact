@@ -2,7 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import logo from '../assets/shreeva-logo.png';
 import './Navbar.css';
+
+const NAV_LINKS = [
+  { label: 'Engagement Rings', to: '/shop?type=Ring' },
+  { label: 'Wedding Bands', to: '/shop?type=Ring' },
+  { label: 'Earrings', to: '/shop?type=Earring' },
+  { label: 'Bracelets', to: '/shop?type=Bracelet' },
+  { label: 'Necklaces & Pendants', to: '/shop?type=Pendant' },
+  { label: 'Custom Design', to: '/custom' },
+];
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -25,14 +35,13 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
-        <Link to="/" className="navbar-logo">SHREEVA</Link>
+        <Link to="/" className="navbar-logo">
+          <img src={logo} alt="Shreeva" />
+          <span>Shreeva</span>
+        </Link>
 
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          <li><Link to="/shop">Shop</Link></li>
-          <li><Link to="/shop?type=Chain">Chains</Link></li>
-          <li><Link to="/shop?type=Pendant">Pendants</Link></li>
-          <li><Link to="/custom">Custom</Link></li>
-          <li><Link to="/about">About</Link></li>
+          {NAV_LINKS.map(link => <li key={link.label}><Link to={link.to}>{link.label}</Link></li>)}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
 

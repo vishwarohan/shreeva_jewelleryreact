@@ -1,7 +1,7 @@
 .auth-page {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
   background: var(--black);
-  background-image: radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 60%);
+  background-image: radial-gradient(ellipse at 50% 40%, rgba(122,62,144,0.06) 0%, transparent 60%);
   padding: 2rem;
 }
 .auth-card {

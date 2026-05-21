@@ -13,107 +13,107 @@ const CategorySVG = ({ type }) => {
         {/* Chain links */}
         {[0,1,2,3,4,5].map(i => (
           <g key={i} transform={`translate(0, ${i * 20})`}>
-            <ellipse cx="60" cy="15" rx="22" ry="8" fill="none" stroke="#C9A84C" strokeWidth="3" opacity={1 - i*0.1}/>
-            <ellipse cx="60" cy="15" rx="14" ry="4" fill="rgba(201,168,76,0.15)" stroke="#E8C96A" strokeWidth="1" opacity={1 - i*0.1}/>
+            <ellipse cx="60" cy="15" rx="22" ry="8" fill="none" stroke="#7A3E90" strokeWidth="3" opacity={1 - i*0.1}/>
+            <ellipse cx="60" cy="15" rx="14" ry="4" fill="rgba(122,62,144,0.15)" stroke="#A86BC1" strokeWidth="1" opacity={1 - i*0.1}/>
           </g>
         ))}
         {/* Pendant drop */}
-        <polygon points="60,128 72,112 48,112" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="60" cy="108" r="6" fill="rgba(201,168,76,0.4)" stroke="#E8C96A" strokeWidth="1.5"/>
+        <polygon points="60,128 72,112 48,112" fill="rgba(122,62,144,0.3)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="60" cy="108" r="6" fill="rgba(122,62,144,0.4)" stroke="#A86BC1" strokeWidth="1.5"/>
       </svg>
     ),
     Pendant: (
       <svg width="120" height="140" viewBox="0 0 120 140" fill="none">
         {/* Chain top */}
-        <line x1="60" y1="10" x2="60" y2="38" stroke="#C9A84C" strokeWidth="2.5" strokeDasharray="4 3"/>
-        <circle cx="60" cy="8" r="5" fill="none" stroke="#C9A84C" strokeWidth="2"/>
+        <line x1="60" y1="10" x2="60" y2="38" stroke="#7A3E90" strokeWidth="2.5" strokeDasharray="4 3"/>
+        <circle cx="60" cy="8" r="5" fill="none" stroke="#7A3E90" strokeWidth="2"/>
         {/* Main pendant */}
-        <circle cx="60" cy="82" r="42" fill="rgba(201,168,76,0.06)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="60" cy="82" r="30" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" strokeWidth="1"/>
-        <circle cx="60" cy="82" r="18" fill="rgba(201,168,76,0.2)" stroke="#E8C96A" strokeWidth="1"/>
+        <circle cx="60" cy="82" r="42" fill="rgba(122,62,144,0.06)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="60" cy="82" r="30" fill="rgba(122,62,144,0.1)" stroke="#7A3E90" strokeWidth="1"/>
+        <circle cx="60" cy="82" r="18" fill="rgba(122,62,144,0.2)" stroke="#A86BC1" strokeWidth="1"/>
         {/* Sparkle */}
         <circle cx="60" cy="82" r="6" fill="rgba(232,201,106,0.6)"/>
         {/* WYW text */}
-        <text x="60" y="115" fontFamily="'Bebas Neue',sans-serif" fontSize="11" fill="#C9A84C" textAnchor="middle" letterSpacing="3">WYW</text>
+        <text x="60" y="115" fontFamily="'Bebas Neue',sans-serif" fontSize="11" fill="#7A3E90" textAnchor="middle" letterSpacing="3">WYW</text>
         {/* Gem dots */}
         {[[60,42],[88,57],[96,82],[88,107],[60,122],[32,107],[24,82],[32,57]].map(([cx,cy],i) => (
-          <circle key={i} cx={cx} cy={cy} r="2.5" fill="#C9A84C" opacity="0.7"/>
+          <circle key={i} cx={cx} cy={cy} r="2.5" fill="#7A3E90" opacity="0.7"/>
         ))}
       </svg>
     ),
     Ring: (
       <svg width="120" height="140" viewBox="0 0 120 140" fill="none">
         {/* Ring band */}
-        <ellipse cx="60" cy="95" rx="38" ry="12" fill="rgba(201,168,76,0.1)" stroke="#C9A84C" strokeWidth="2"/>
-        <ellipse cx="60" cy="75" rx="38" ry="12" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" strokeWidth="2"/>
-        <rect x="22" y="75" width="76" height="20" fill="rgba(201,168,76,0.08)" stroke="none"/>
-        <line x1="22" y1="75" x2="22" y2="95" stroke="#C9A84C" strokeWidth="2"/>
-        <line x1="98" y1="75" x2="98" y2="95" stroke="#C9A84C" strokeWidth="2"/>
+        <ellipse cx="60" cy="95" rx="38" ry="12" fill="rgba(122,62,144,0.1)" stroke="#7A3E90" strokeWidth="2"/>
+        <ellipse cx="60" cy="75" rx="38" ry="12" fill="rgba(122,62,144,0.08)" stroke="#7A3E90" strokeWidth="2"/>
+        <rect x="22" y="75" width="76" height="20" fill="rgba(122,62,144,0.08)" stroke="none"/>
+        <line x1="22" y1="75" x2="22" y2="95" stroke="#7A3E90" strokeWidth="2"/>
+        <line x1="98" y1="75" x2="98" y2="95" stroke="#7A3E90" strokeWidth="2"/>
         {/* Center stone */}
-        <polygon points="60,38 78,58 60,72 42,58" fill="rgba(201,168,76,0.35)" stroke="#E8C96A" strokeWidth="1.5"/>
-        <polygon points="60,38 78,58 60,50" fill="rgba(232,201,106,0.5)" stroke="#E8C96A" strokeWidth="0.5"/>
-        <polygon points="60,38 42,58 60,50" fill="rgba(201,168,76,0.3)" stroke="#E8C96A" strokeWidth="0.5"/>
+        <polygon points="60,38 78,58 60,72 42,58" fill="rgba(122,62,144,0.35)" stroke="#A86BC1" strokeWidth="1.5"/>
+        <polygon points="60,38 78,58 60,50" fill="rgba(232,201,106,0.5)" stroke="#A86BC1" strokeWidth="0.5"/>
+        <polygon points="60,38 42,58 60,50" fill="rgba(122,62,144,0.3)" stroke="#A86BC1" strokeWidth="0.5"/>
         {/* Side stones */}
         {[[32,62],[88,62],[25,72],[95,72]].map(([cx,cy],i) => (
-          <circle key={i} cx={cx} cy={cy} r="3" fill="rgba(201,168,76,0.5)" stroke="#C9A84C" strokeWidth="0.8"/>
+          <circle key={i} cx={cx} cy={cy} r="3" fill="rgba(122,62,144,0.5)" stroke="#7A3E90" strokeWidth="0.8"/>
         ))}
       </svg>
     ),
     Bracelet: (
       <svg width="140" height="100" viewBox="0 0 140 100" fill="none">
         {/* Bracelet arc */}
-        <path d="M15,70 Q70,10 125,70" fill="none" stroke="#C9A84C" strokeWidth="10" strokeLinecap="round"/>
+        <path d="M15,70 Q70,10 125,70" fill="none" stroke="#7A3E90" strokeWidth="10" strokeLinecap="round"/>
         <path d="M15,70 Q70,10 125,70" fill="none" stroke="#0f0f0f" strokeWidth="6" strokeLinecap="round"/>
         {/* Stones along bracelet */}
         {[[20,65],[37,40],[57,22],[83,22],[103,40],[120,65]].map(([cx,cy],i) => (
           <g key={i}>
-            <circle cx={cx} cy={cy} r="7" fill="rgba(201,168,76,0.3)" stroke="#E8C96A" strokeWidth="1.2"/>
+            <circle cx={cx} cy={cy} r="7" fill="rgba(122,62,144,0.3)" stroke="#A86BC1" strokeWidth="1.2"/>
             <circle cx={cx} cy={cy} r="3.5" fill="rgba(232,201,106,0.6)"/>
           </g>
         ))}
         {/* Clasp */}
-        <rect x="57" y="78" width="26" height="12" rx="3" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <text x="70" y="88" fontFamily="'Bebas Neue',sans-serif" fontSize="7" fill="#C9A84C" textAnchor="middle" letterSpacing="1">WYW</text>
+        <rect x="57" y="78" width="26" height="12" rx="3" fill="rgba(122,62,144,0.2)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <text x="70" y="88" fontFamily="'Bebas Neue',sans-serif" fontSize="7" fill="#7A3E90" textAnchor="middle" letterSpacing="1">WYW</text>
       </svg>
     ),
     Earring: (
       <svg width="120" height="130" viewBox="0 0 120 130" fill="none">
         {/* Left earring */}
-        <circle cx="32" cy="20" r="7" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" strokeWidth="2"/>
-        <line x1="32" y1="27" x2="32" y2="45" stroke="#C9A84C" strokeWidth="2"/>
-        <polygon points="32,45 42,65 22,65" fill="rgba(201,168,76,0.25)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="32" cy="78" r="14" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="32" cy="78" r="7" fill="rgba(201,168,76,0.3)" stroke="#E8C96A" strokeWidth="1"/>
+        <circle cx="32" cy="20" r="7" fill="rgba(122,62,144,0.2)" stroke="#7A3E90" strokeWidth="2"/>
+        <line x1="32" y1="27" x2="32" y2="45" stroke="#7A3E90" strokeWidth="2"/>
+        <polygon points="32,45 42,65 22,65" fill="rgba(122,62,144,0.25)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="32" cy="78" r="14" fill="rgba(122,62,144,0.15)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="32" cy="78" r="7" fill="rgba(122,62,144,0.3)" stroke="#A86BC1" strokeWidth="1"/>
         {/* Right earring */}
-        <circle cx="88" cy="20" r="7" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" strokeWidth="2"/>
-        <line x1="88" y1="27" x2="88" y2="45" stroke="#C9A84C" strokeWidth="2"/>
-        <polygon points="88,45 98,65 78,65" fill="rgba(201,168,76,0.25)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="88" cy="78" r="14" fill="rgba(201,168,76,0.15)" stroke="#C9A84C" strokeWidth="1.5"/>
-        <circle cx="88" cy="78" r="7" fill="rgba(201,168,76,0.3)" stroke="#E8C96A" strokeWidth="1"/>
+        <circle cx="88" cy="20" r="7" fill="rgba(122,62,144,0.2)" stroke="#7A3E90" strokeWidth="2"/>
+        <line x1="88" y1="27" x2="88" y2="45" stroke="#7A3E90" strokeWidth="2"/>
+        <polygon points="88,45 98,65 78,65" fill="rgba(122,62,144,0.25)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="88" cy="78" r="14" fill="rgba(122,62,144,0.15)" stroke="#7A3E90" strokeWidth="1.5"/>
+        <circle cx="88" cy="78" r="7" fill="rgba(122,62,144,0.3)" stroke="#A86BC1" strokeWidth="1"/>
         {/* Sparkle dots */}
-        <circle cx="32" cy="78" r="2.5" fill="#E8C96A"/>
-        <circle cx="88" cy="78" r="2.5" fill="#E8C96A"/>
+        <circle cx="32" cy="78" r="2.5" fill="#A86BC1"/>
+        <circle cx="88" cy="78" r="2.5" fill="#A86BC1"/>
       </svg>
     ),
     Grillz: (
       <svg width="140" height="100" viewBox="0 0 140 100" fill="none">
         {/* Mouth shape */}
-        <path d="M20,35 Q70,15 120,35 L120,65 Q70,80 20,65 Z" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" strokeWidth="2"/>
+        <path d="M20,35 Q70,15 120,35 L120,65 Q70,80 20,65 Z" fill="rgba(122,62,144,0.08)" stroke="#7A3E90" strokeWidth="2"/>
         {/* Teeth */}
         {[28,44,58,72,86,100,112].map((x,i) => (
           <rect key={i} x={x} y="38" width="12" height="24" rx="2"
-            fill={i===3 ? "rgba(201,168,76,0.4)" : "rgba(201,168,76,0.22)"}
-            stroke="#E8C96A" strokeWidth="0.8"/>
+            fill={i===3 ? "rgba(122,62,144,0.4)" : "rgba(122,62,144,0.22)"}
+            stroke="#A86BC1" strokeWidth="0.8"/>
         ))}
         {/* Gem on center tooth */}
-        <polygon points="84,42 90,50 84,56 78,50" fill="rgba(232,201,106,0.7)" stroke="#E8C96A" strokeWidth="0.8"/>
+        <polygon points="84,42 90,50 84,56 78,50" fill="rgba(232,201,106,0.7)" stroke="#A86BC1" strokeWidth="0.8"/>
         {/* WYW label */}
-        <text x="70" y="92" fontFamily="'Bebas Neue',sans-serif" fontSize="12" fill="#C9A84C" textAnchor="middle" letterSpacing="4">GRILLZ</text>
+        <text x="70" y="92" fontFamily="'Bebas Neue',sans-serif" fontSize="12" fill="#7A3E90" textAnchor="middle" letterSpacing="4">GRILLZ</text>
       </svg>
     ),
   };
   return (
-    <div className="category-svg-wrap" style={{ filter:'drop-shadow(0 0 16px rgba(201,168,76,0.35))' }}>
+    <div className="category-svg-wrap" style={{ filter:'drop-shadow(0 0 16px rgba(122,62,144,0.35))' }}>
       {svgs[type] || svgs.Pendant}
     </div>
   );
