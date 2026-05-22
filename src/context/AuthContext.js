@@ -11,6 +11,13 @@ export function AuthProvider({ children }) {
   });
   const [loading, setLoading] = useState(false);
 
+  const logout = (showToast = true) => {
+    localStorage.removeItem('wyw_token');
+    localStorage.removeItem('wyw_user');
+    setUser(null);
+    if (showToast) toast.success('Logged out');
+  };
+
   const fetchMe = useCallback(async () => {
     const token = localStorage.getItem('wyw_token');
     if (!token) return;
@@ -18,8 +25,12 @@ export function AuthProvider({ children }) {
       const { data } = await api.get('/auth/me');
       setUser(data.user);
       localStorage.setItem('wyw_user', JSON.stringify(data.user));
-    } catch {
-      logout();
+    } catch (err) {
+      // Only logout on 401 (invalid/expired token)
+      // Keep user logged in on network errors or server sleeping
+      if (err.response?.status === 401) {
+        logout(false);
+      }
     }
   }, []);
 
@@ -57,13 +68,6 @@ export function AuthProvider({ children }) {
     } finally {
       setLoading(false);
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem('wyw_token');
-    localStorage.removeItem('wyw_user');
-    setUser(null);
-    toast.success('Logged out');
   };
 
   return (
