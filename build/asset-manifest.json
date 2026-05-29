@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.79ae6330.css",
-    "main.js": "/static/js/main.3ff7c1a1.js",
+    "main.js": "/static/js/main.f14f6a6d.js",
     "static/media/necklace-lifestyle.jpg": "/static/media/necklace-lifestyle.8afe71d8795037abde94.jpg",
     "static/media/earring-lifestyle.jpg": "/static/media/earring-lifestyle.4a61854fe203cbd4bf57.jpg",
     "static/media/pearl-flower-necklace.jpg": "/static/media/pearl-flower-necklace.cdaaa8aa3ac85b83a2c0.jpg",
@@ -9,10 +9,10 @@
     "static/media/shreeva-logo.png": "/static/media/shreeva-logo.e3fcbf0f55a44d44b6dd.png",
     "index.html": "/index.html",
     "main.79ae6330.css.map": "/static/css/main.79ae6330.css.map",
-    "main.3ff7c1a1.js.map": "/static/js/main.3ff7c1a1.js.map"
+    "main.f14f6a6d.js.map": "/static/js/main.f14f6a6d.js.map"
   },
   "entrypoints": [
     "static/css/main.79ae6330.css",
-    "static/js/main.3ff7c1a1.js"
+    "static/js/main.f14f6a6d.js"
   ]
 }

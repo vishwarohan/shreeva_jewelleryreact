@@ -6,8 +6,17 @@ import api from '../utils/api';
 import toast from 'react-hot-toast';
 import './CartPage.css';
 
+const loadRazorpayScript = () => new Promise(resolve => {
+  if (window.Razorpay) return resolve(true);
+  const script = document.createElement('script');
+  script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+  script.onload = () => resolve(true);
+  script.onerror = () => resolve(false);
+  document.body.appendChild(script);
+});
+
 export default function CartPage() {
-  const { cart, cartTotal, updateQty, removeFromCart } = useCart();
+  const { cart, cartTotal, updateQty, removeFromCart, fetchCart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
   const [placing, setPlacing] = useState(false);
@@ -24,17 +33,68 @@ export default function CartPage() {
 
   const handleOrder = async () => {
     if (!user) { toast.error('Please log in to place an order'); navigate('/login'); return; }
-    if (!form.name || !form.street || !form.city || !form.pincode) {
-      toast.error('Please fill in your shipping address'); return;
+    if (!form.name || !form.phone || !form.street || !form.city || !form.state || !form.pincode) {
+      toast.error('Please fill in all shipping details'); return;
     }
     setPlacing(true);
     try {
       const items = cart.map(i => ({ product: i.product._id, quantity: i.quantity, size: i.size }));
+      const shippingAddress = { name: form.name, phone: form.phone, street: form.street, city: form.city, state: form.state, pincode: form.pincode };
+
+      if (form.paymentMethod === 'Razorpay') {
+        toast.loading('Opening secure payment checkout...', { id: 'payment-start' });
+        const loaded = await loadRazorpayScript();
+        toast.dismiss('payment-start');
+        if (!loaded) {
+          toast.error('Could not load payment checkout. Please try again.');
+          return;
+        }
+
+        const { data } = await api.post('/orders/payment/razorpay', { items, shippingAddress });
+        const options = {
+          key: data.key,
+          amount: data.razorpayOrder.amount,
+          currency: data.razorpayOrder.currency,
+          name: 'Shreeva Jewels',
+          description: 'Jewellery order payment',
+          order_id: data.razorpayOrder.id,
+          prefill: {
+            name: form.name,
+            email: user.email,
+            contact: form.phone,
+          },
+          theme: { color: '#4B145D' },
+          handler: async (response) => {
+            try {
+              const verify = await api.post('/orders/payment/razorpay/verify', {
+                items,
+                shippingAddress,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              });
+              await fetchCart();
+              toast.success('Payment successful! Order placed.');
+              navigate(`/orders/${verify.data.order._id}`);
+            } catch (err) {
+              toast.error(err.response?.data?.message || 'Payment verification failed');
+            }
+          },
+          modal: {
+            ondismiss: () => toast('Payment cancelled'),
+          },
+        };
+        const checkout = new window.Razorpay(options);
+        checkout.open();
+        return;
+      }
+
       const { data } = await api.post('/orders', {
         items,
-        shippingAddress: { name: form.name, phone: form.phone, street: form.street, city: form.city, state: form.state, pincode: form.pincode },
+        shippingAddress,
         paymentMethod: form.paymentMethod,
       });
+      await fetchCart();
       toast.success('Order placed successfully!');
       navigate(`/orders/${data.order._id}`);
     } catch (err) {
@@ -129,13 +189,13 @@ export default function CartPage() {
               <label className="form-label">Payment Method</label>
               <select className="form-select" name="paymentMethod" value={form.paymentMethod} onChange={handleChange}>
                 <option value="COD">Cash on Delivery</option>
-                <option value="UPI">UPI</option>
-                <option value="Card">Credit / Debit Card</option>
-                <option value="NetBanking">Net Banking</option>
+                <option value="Razorpay">Online Payment - UPI / Card / Net Banking</option>
               </select>
             </div>
             <button className="btn-primary" style={{width:'100%',marginTop:'0.5rem',justifyContent:'center'}} onClick={handleOrder} disabled={placing}>
-              {placing ? 'Placing Order...' : `Place Order · ₹${total.toLocaleString()}`}
+              {placing
+                ? (form.paymentMethod === 'Razorpay' ? 'Opening Payment...' : 'Placing Order...')
+                : `${form.paymentMethod === 'Razorpay' ? 'Pay Securely' : 'Place Order'} · ₹${total.toLocaleString()}`}
             </button>
           </div>
         </div>
